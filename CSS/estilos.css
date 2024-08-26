@@ -1,0 +1,821 @@
+/*GENERAL*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+/* HERO IMAGEN  */
+/* .fondosHero{
+	width: 100%;
+	height: 950px;
+	background-size: cover;
+	position: absolute;	
+}
+
+#fondoHero1{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3)), url("../img/fondo.jpg");
+	z-index: 3;
+}
+#fondoHero2{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3)), url("../img/fondo2.jpg");
+	z-index:2;
+} */
+
+/* .mainSlide{
+	animation-name:mainSlideAnim ;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+.nextSlide{
+	animation-name:nextSlideAnim ;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.hiddenSlide {
+	display: none;
+} */
+
+
+/* @keyframes mainSlideAnim{
+	0%{margin-left: 0%;}
+	100% {margin-left: -100;}
+}
+@keyframes nextSlideAnim{
+	0%{margin-left: 100%;}
+	100% {margin-left: 0;}
+} */
+
+/* #portada {
+la he duplicado y la tengo que borrar
+	width: 100%;
+	height: 950px;
+	
+	background-repeat: no-repeat;
+			
+} */
+
+
+/*MENU*/
+
+nav{
+	width: 100%;
+	height: 80px;
+/*	Se ve la barra transparente*/
+	background-color: rgba(51, 51, 51, 0.2);
+	position: fixed;
+	z-index: 1;
+	top:0px;
+	transition-property: top, height, font-size;
+	transition-duration: 0.75s;
+	font-size: 25px;
+}
+
+.barraNav{
+	position: fixed;
+ 	top: 0;
+  	width: 100%;
+/*  	La barra siempre este por encima*/
+ 	z-index: 1;
+}
+
+#menu {
+	line-height: 150px;
+	overflow:hidden;
+	width: auto;
+	list-style-type: none;
+	transition-property: line-height;
+	transition-duration: 0.8s;
+}
+
+.elementoMenu > a{
+	font-family: "Madimi One", sans-serif;
+	text-decoration: none;
+	color:white;
+	/* transiciones */
+	transition-property: color;
+	transition-duration: 0.8s;
+
+	/* LLamo la animacion creada  */
+	animation-name:nav;
+	animation-duration: 4s;	
+
+}
+.elementoMenu > a:hover {
+	color:rgb(146, 146, 146);
+
+}
+
+.elementoMenu {
+	float:left;
+	margin: 0px 25px;
+	padding: 0px;
+	/* display: inline-block;
+	margin-right: 10px; */
+	/* font-size: 25px; */
+}
+
+#logocancha{
+	height: auto;
+	width: 80px;
+	float:left;
+	margin-bottom: 10px;
+	transition-property: padding;
+	transition-duration: 0.8s;
+	
+	/* LLamo la animacion creada  */
+	animation-name:encabe;
+	animation-duration: 2s;	
+}
+
+
+
+/* SUBMENU  */
+
+#submenu{
+	width: auto;
+	height: auto;
+	list-style: none;
+	position: absolute;
+	top: 90px;
+	z-index: 1;
+	background-color: rgba(51, 51, 51, 0.2);
+	
+	/* Esconder el submenu  */
+	display: none;
+
+
+}
+
+.elemSubmenu{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+
+
+.elemSubmenu >a {
+	text-decoration: none;
+	color: #dddddd;
+	font-size:1.2rem;
+	font-family: "Madimi One", sans-serif;
+
+	
+		/* transiciones */
+		transition-property: color;
+		transition-duration: 0.8s;
+	
+		/* LLamo la animacion creada  */
+		animation-name:nav;
+		animation-duration: 1s;
+
+}
+.elemSubmenu >a:hover {
+	color:rgb(146, 146, 146);
+
+}
+
+/* Desplegado del sub menu */
+
+.elementoMenu:hover #submenu {
+	display: block;
+}
+
+
+
+/* MODAL BIENVENIDA  */
+#modalBienvenida{
+	width: 100vw;
+	height:100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	display: none;
+	z-index: 5;
+}
+
+#modalBoxB{
+	width: 800px;
+	height:500px;
+	background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0, 0, 0, 0.1)), url("../img/lobo.jpg");
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 50px;
+	text-align: center;
+	border-radius: 25px;
+	text-shadow: 8px 3px 0px rgba(0,0,0,0.6);
+}
+
+#modalBoxB>h1{
+	font-size: 5rem;
+	font-family: "Madimi One", sans-serif;
+	font-weight: normal;
+	margin-bottom:5px ;
+	color: white;
+		
+}
+#modalBoxB>button{
+	font-family: "Madimi One", sans-serif;
+	font-size: 3rem;
+	padding: 20px 40px;
+	border-radius: 20px;
+	background-color: #DFFE00;	
+}
+#modalBoxB>button:hover{
+	background-color: #2E2CF2;
+	color:#DFFE00;
+	/* transicion   */
+	transition-property: color, border-style, background-color;
+	transition-duration: 0.5s;
+}
+
+
+
+
+
+
+#tituloEncabezado{
+	font-family: "Madimi One", sans-serif;
+	font-size: 7rem;
+	color:white;
+/*	centramos el texto*/
+	text-align: center;
+
+	position: relative;
+	top: 150px;
+/*	sombra*/
+	text-shadow: 8px 3px 0px rgba(0,0,0,0.6);
+
+	/* LLamo la animacion creada  */
+	animation-name:encabe;
+	animation-duration: 3s;
+	z-index: 3;	
+	
+}
+
+#subtituloEncabezado{
+	font-family: "Madimi One", sans-serif;
+	font-size: 3rem;
+	color:white;
+	text-align: center;
+	position: relative;
+	top: 250px;
+	margin-top: 300px;
+	/*	sombra*/
+	text-shadow: 8px 3px 0px rgba(0,0,0,0.6);
+
+	/* LLamo la animacion creada  */
+	animation-name:subencabe;
+	animation-duration: 3s;
+	z-index: 3;
+}
+
+
+#portada {
+
+	width: 100%;
+	height: 950px;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3)), url("../img/fondo.jpg"); 
+	background-repeat: no-repeat;
+	background-attachment: cover;		
+}
+
+/* ANIMACIÓN ENCABEZADO  */
+
+@keyframes encabe {
+	0% { opacity:0; top: 190px;}
+	75% {opacity:1;top: 190px; }
+	100% {opacity:1; top: 150px;}
+}
+@keyframes subencabe {
+	0% { opacity:0; top: 190px;}
+	75% {opacity:1; top: 190px;}
+	100% {opacity:1;top: 250px;  }
+}
+
+@keyframes nav {
+	0% { opacity:0; }
+	75% {opacity:1; }
+	100% {opacity:1; }
+}
+
+
+/*SOBRE NOSOTROS*/
+
+#nosotros{
+	width: 100%;
+	height: 950px;
+	background-color:#DFFE00;
+	overflow: hidden;
+}
+
+.tituloNegro{
+	font-family: "Madimi One", sans-serif;
+	font-size: 3rem;
+	text-align: center;
+
+	margin-top: 70px;
+}
+
+#contenedorFilo{
+	width: 1200px;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	margin-top: 200px;
+	overflow: hidden;
+	}
+
+	.colFilo{
+		width: 50%;
+		height: 500px;
+		
+		
+		float: left;
+
+	}
+
+	#videoFilo{
+		width: calc(100% -75);
+		height: 300px;
+		padding-left: 35px;
+		margin-right: 75px; 
+		align-items: center;
+		
+	}
+
+	.colFilo > p {
+		font-family: madimi one;
+		font-size:1.4rem;
+		text-align: center;
+		padding-right: 35px;
+	} 
+	
+
+#contenedorSN{
+	/* width: 1200px;
+	height: 770px; */
+	margin-left: auto;
+	margin-right: auto;
+/*	para ver el contenedor*/
+	overflow: hidden;
+	margin-top: 80px;
+}
+
+.colSN{ 
+	width: 50%;
+	height: 770px;
+	float: left;
+	/* margin-left: auto; */
+}
+
+.colSN > p {
+	font-family: madimi one;
+	font-size:1.23rem;
+	text-align: center;
+} 
+
+.imagenSN{
+	width: calc(100% - 75px);
+	height: 770px;
+	margin-left: 75px;
+
+}
+
+/*HORARIOS*/
+#horarios{
+	width: 100%;
+	height: 950px;
+	background-color:#2E2CF2;
+	overflow: hidden;
+}
+#contenedorH{
+	width: 1200px;
+	height: 650px;
+	margin-left: auto;
+	margin-right: auto;
+/*	para ver el contenedor*/
+	overflow: hidden;
+	position:relative;
+	margin-top: 60px;
+
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: background-color 3s ease-in-out;
+}
+
+.slide.active {
+    opacity: 4;
+}
+
+.tituloBlanco{
+	font-family: "Madimi One", sans-serif;
+	font-size: 3rem;
+	color: white;
+	text-align: center;
+	margin-top: 70px;
+}
+
+/*GALERIA EQUIPOS*/
+#galeriaEquipo{
+	width: 100%;
+	height: 950px;
+	background-color: #DFFE00;
+	overflow: hidden;
+}
+
+.contenedorEquipos{
+	width: 1275px;
+	height: 700px;
+	margin-left: auto;
+	margin-right: auto;
+/*	para ver el contenedor*/
+	margin-top: 10px;
+	overflow: hidden;
+
+}
+.pestanaActiva{
+	color:#2E2CF2;
+	text-decoration: underline;
+	/* border-bottom-style: solid; */
+}
+
+.contenedorPestanas{
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+
+.etiqueta{
+	font-family: "Madimi One", sans-serif;
+	width: 33.33%;
+	font-size: 1.9rem;
+	color:black;
+	float: left;
+	text-align: right;
+	margin-top: 30px;
+	margin-left: 40px;
+    text-decoration: none;
+	transition-property: color;
+	transition-duration: 0.4s;
+	padding-bottom: 5px;
+}
+
+.etiqueta:hover{
+	color:#2E2CF2;
+	text-decoration: underline;
+    text-decoration-color: #2E2CF2;
+}
+
+.equipo{
+	width: calc(33.33% - 75px);
+	height: calc(50% - 75px);
+	float: left;
+	/*	centrar*/
+	margin-right: 37.5px;
+	margin-left: 37.5px;
+	/*	margen arriba*/
+	margin-top: 37.5px;
+	/*	margen abajo*/
+	margin-bottom: 37.5px;
+}
+
+@keyframes animEquipo{
+	from {transform: scale(0.25,0.25);};
+	to{transform: scale(1,1);};
+}
+
+.equipoAnimado{
+	animation-name: animEquipo;
+	animation-duration: 2s; 
+}
+
+.imagenEquipo{
+	width: 100%;
+	height: 250px;
+	
+	overflow: hidden;
+	/* overflow: hidden; */
+}
+
+#imagenEquipo img {
+	width: 100%;
+	height: 100%;
+	transition-property: transform;
+	transition-duration: 0.5s;
+	border-radius: 25px;
+}
+#imagenEquipo img:hover {
+	transform: scale(1.2, 1.2);
+	box-shadow: 0px 0px 7px 4px #2E2CF2;
+}
+
+.categoria {
+	text-align: center;
+	font-family: madimi one;
+	font-size: 1.5rem;
+	color: #000000;
+	margin-top: 22px;
+	transition-duration: 0.8s;
+	padding-bottom: 5px;
+}
+
+@keyframes animCategoria{
+	from {transform: scale(0.25,0.25);};
+	to{transform: scale(1,1);};
+}
+
+.categoriAnimado{
+	animation-name: animCategoria;
+	animation-duration: 4s; 
+}
+
+.categoria:hover{
+	color:#2E2CF2;
+}
+
+/* GALERIA */
+
+#galeria{
+	width: 100%;
+	height: 1000px;
+	background-color: #2E2CF2;
+	overflow: hidden;
+}
+ 
+#contenedorGaleria{
+	width: 1210px;
+	height: 525px;
+/*	background-color: orange;*/
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.imgGal{
+	width: calc(25% - 10px);
+	height: calc(33.33% - 10px);
+	float: left;
+	margin: 5px;
+	border-radius: 25px;
+}
+
+.imgGal:hover{
+	box-shadow: 0px 0px 7px 4px #DFFE00;
+	cursor:pointer;
+}
+
+ /* Formato al LightBox  */
+#modalLightboxG{
+	width: 100vw;
+	height:100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	display: none;
+	top: 0;
+	z-index: 5;
+}
+
+#imageToShow{
+	width: 80%;
+	height:864px;
+	/* background-color: #dddddd; */
+	/* background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0, 0, 0, 0.1)), url("../img/lobo.jpg"); */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	/* padding: 50px; */
+	text-align: center;
+	text-shadow: 8px 3px 0px rgba(0,0,0,0.6);
+}
+
+
+.imageLightB{
+	width: 100%;
+	height: auto;
+	border-radius: 25px;
+
+}
+
+.lbButtons{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%);
+	background-color: #FF0057;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #000000;
+}
+
+.lbButtons:hover{
+	background-color: #2E2CF2;
+	border-color: #DFFE00;
+}
+
+.lbbRight{
+	right: 60px;
+}
+.lbbLeft{
+	left: 140px;
+}
+
+.lbButtons i {
+	font-size: 3rem;
+	color: #000000;
+}
+
+.lbButtons:hover i {
+	color:#DFFE00
+}
+
+/*CONTACTOS*/
+
+#contactos{
+	width: 100%;
+	height: 950px;
+	background-color:#DFFE00;
+	overflow: hidden;
+
+}
+
+#contenedorInfo{
+	width: 1200px;
+	height: 600px;
+	
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 100px;
+}
+
+#monitor{
+	font-size:1.8rem;
+	text-align: center;
+	margin-top: 60px;
+}
+#infoP{
+	font-size:1.2rem;
+	text-align: center;
+	margin-top: 60px;
+}
+
+#info{
+	font-family: "Madimi One", sans-serif;
+	width: 50%;
+	height:600px;
+	background-color: #DFFE00;
+	border-style: solid;
+	overflow: hidden;
+	float: left;
+}
+
+.cabeceraInfo{
+	font-size:2.5rem;
+	text-align: center;
+	margin-top: 60px;
+}
+
+
+
+#formulario{
+	font-size:1.5rem;
+	float: left;
+	margin-top: 30px;
+	margin-right: 37.5px;
+	margin-left: 37.5px;
+
+}
+
+input{
+	font-family: "Madimi One", sans-serif;
+	display: block;
+	height: 35px;
+	margin-top: 25px;
+	width:530px;
+	
+}
+#comentenos{
+	height: 80px;
+}
+
+#enviar{
+	width: 150px;
+	border-style: solid;
+	background-color:#FF0057;
+	font-size:1.5rem;
+	border-radius: 30px;
+	text-align: center;
+
+}
+
+#enviar:hover{
+	border-style: solid;
+	border-color:black ;
+	background-color:#2E2CF2;
+	color: white;
+	/* transicion   */
+	transition-property: color, border-style, background-color;
+	transition-duration: 0.5s;
+	
+}
+
+/* MODAL RESERVA  */
+#modalReserva{
+	width: 100vw;
+	height:100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	top:0px;
+	position: fixed;
+	display: none;
+	z-index: 5;
+}
+
+#modalBoxBR{
+	width: 800px;
+	height:500px;
+	background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.4)), url("../img/toro.jpg");
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 50px;
+	text-align: center;
+	border-radius: 25px;
+	/* text-shadow: 8px 3px 0px rgba(0,0,0,0.6); */
+}
+
+#modalBoxBR>h1{
+	font-size: 2rem;
+	font-family: "Madimi One", sans-serif;
+	font-weight: normal;
+	margin-bottom:250px;
+	color: white;
+		
+}
+#modalBoxBR>p{
+	font-size: 1rem;
+	font-family: "Madimi One", sans-serif;
+	text-align: center;
+	font-weight: normal;
+	color: white;
+	margin-bottom: 20px;
+		
+}
+#modalBoxBR>button{
+	font-family: "Madimi One", sans-serif;
+	font-size: 2.5rem;
+	padding: 10px 15px;
+	border-radius: 20px;
+	background-color: #DFFE00;	
+}
+#modalBoxBR>button:hover{
+	background-color: #2E2CF2;
+	color:#DFFE00;
+	/* transicion   */
+	transition-property: color, border-style, background-color;
+	transition-duration: 0.5s;
+}
+
+/*PIE DE PAGINA*/
+
+#pieDePagina{
+	width: 100%;
+	height: 100px;
+	background-color: #2E2CF2;
+	text-align: center;
+}
+
+#pieDePagina img {
+	height: 100%;
+	width: auto;
+	padding: 30px;
+	
+}
+
+/* .pieDePagina img:hover {
+	color: rgb(146, 146, 146);
+} */
+
+
+
+
+

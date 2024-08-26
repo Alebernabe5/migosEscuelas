@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- METADATOS -->
+	<meta charset="UTF-8"> <meta name="author" content="Alejandro Bernabé Guerrero">
+    <meta name="description" content="Escuelas de Futsal Migo´s">
+    <meta name="keywords" content="Futbol sala, futsal, 40x20">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- TITULO -->
+	<title>MIGO'S ESCUELA FUTSAL</title>
+	<!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/logoSinFondo.png">
+    <!-- CSS -->
+    <link href="CSS/estilos.css" rel="stylesheet">
+	<!-- ENLACE JS  -->
+	<script src="JS/scripts.js"></script>
+    <!-- FUENTES -->
+    <!-- Madimi one -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Pacifico&family=Quicksand:wght@300..700&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+	<!-- Link Font Awesome -->
+	<script src="https://kit.fontawesome.com/93e6cbc562.js" crossorigin="anonymous"></script>
+
+	<!-- precarga de imagenes  -->
+	<link rel="preload" as="image" href="img/fondo.jpg">
+	<link rel="preload" as="image" href="img/fondo2.jpg">
+	<link rel="preload" as="image" href="img/1.png">
+	<link rel="preload" as="image" href="img/2.png">
+
+	<!-- AOS ANIMATION -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<body>
+	<!-- MODAL BIENVENIDA  -->
+
+	<div id="modalBienvenida">
+		<div id="modalBoxB">
+			<h1>Bienvenido a la Escuelas de Futsal Migo´s</h1>
+			<button onclick="cerrarMBB()">Disfruta con nosotros</button>
+		</div>
+	</div>
+
+	<!-- ENCABEZADO -->
+	<header id="cabecera" class="barraNav">
+
+		<!-- <div class="fondosHero" id="fondoHero1"></div>
+		<div class="fondosHero mainSlide" id="fondoHero2"></div> -->
+
+		 <!-- Barra de navegación  -->
+	<nav id="navbar">
+		<a href="index.html">
+			<img id="logocancha" src="img/logocancha.png" alt="logo">
+		</a>
+			<ul id="menu" >
+
+				<li class="elementoMenu"><a href="#portada">Inicio</a></li>
+				<li class="elementoMenu"><a href="#nosotros">Sobre Nosotros</a></li>
+				<li class="elementoMenu"><a href="#horarios">Horarios</a></li>
+				<li class="elementoMenu"><a href="#galeriaEquipo">Equipos</a>
+					<ul id="submenu">
+						<li class="elemSubmenu"><a href="#galeriaEquipo" onclick="marcarPestana('Equipos','tabEquipos')">Equipos</a></li>
+						<li class="elemSubmenu"><a href="#galeriaEquipo"  onclick="marcarPestana('Entrenadores','tabEntrenadores')">Entrenadores</a></li>
+						<!-- <li class="elemSubmenu"><a href="">Benjamín</a></li>
+						<li class="elemSubmenu"><a href="">Alevín</a></li>
+						<li class="elemSubmenu"><a href="">Infantil</a></li>
+						<li class="elemSubmenu"><a href="">Cadete</a></li> -->
+					</ul>
+
+				</li>
+				<li class="elementoMenu"><a href="#galeria">Galería Campus</a></li>
+				<li class="elementoMenu"><a href="#contactos">Contacto</a></li>
+			</ul>
+		</nav> 
+
+	</header>
+
+	<!-- CABECERA PAG -->
+	<section id="portada">
+		<h1 id="tituloEncabezado">MIGO´S ESCUELAS FUTSAL</h1>
+		<h2 id="subtituloEncabezado">JUNTOS SEREMOS MÁS GRANDES, SEREMOS MÁS FUERTES</h2> 
+	</section>
+
+	<!-- SOBRE NOSOTROS -->
+	<section id="nosotros">
+		<h2 class="tituloNegro" data-aos="fade-up">Sobre nosotros</h2>
+
+		<div id="contenedorFilo">
+			<div class="colFilo" data-aos="fade-down-right">
+				<p>Somos los hermanos Migos, apasionados del fútbol sala y comprometidos con el desarrollo deportivo en Juan Velasco. Fundamos la Escuela de Fútbol Sala en 2020 para ofrecer oportunidades a niños y jóvenes, promoviendo valores como el trabajo en equipo y la disciplina. Nuestros entrenadores no solo enseñan habilidades técnicas, sino también valores como el respeto y la perseverancia. Cada año, vemos cómo nuestros jugadores crecen como atletas y personas seguras de sí mismas. Estamos orgullosos de formar futuros líderes y estamos emocionados por el futuro de nuestra escuela. ¡Únete a nosotros en esta emocionante aventura!</p></p>
+			</div>
+			<div class="colFilo" data-aos="fade-down-left" data-aos="zoom-out-down">
+				<div class="videoFilo">
+					<video src="video/nosotros.mp4" controls muted  width="auto" height="334px" poster="img/jaimefran.jpg"></video>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<!-- HORARIOS -->
+	<section id="horarios">
+		<h2 class="tituloBlanco" data-aos="fade-up">Horarios de entrenamientos</h2>
+		<div id="contenedorH">
+			<!-- Aqui va un carrusel de foto con el horario de las dos pistas -->
+			<img src="img/1.png" class="slide">
+        	<img src="img/2.png" class="slide">
+		</div>
+	</section>
+
+
+	<!-- PESTAÑAS EQUIPOS Y ENTRENADORES  -->
+	<section id="galeriaEquipo">
+		<h2 class="tituloNegro" data-aos="fade-up">Nuestros Equipos</h2>
+		<div class="contenedorPestanas">
+			<p id="tabEquipos" class="etiqueta pestanaActiva" onclick="marcarPestana('Equipos','tabEquipos')">Equipos</p>
+			<p id="tabEntrenadores" class="etiqueta" onclick="marcarPestana('Entrenadores','tabEntrenadores')">Entrenadores</p>
+		</div>
+		
+		<!-- EQUIPOS -->
+		<div class="contenedorEquipos" id="Equipos" >
+
+			<!-- BEBE -->
+			<div class="equipo">
+				<div id="imagenEquipo">
+					<img src="img/equipos/1bebes.jpg" alt="Bebes">
+					<p class="categoria">Bebes</p>
+				</div>
+			</div>
+			<!-- PREBENJAMIN -->
+			<div class="equipo">
+				<div id="imagenEquipo">
+					<img src="img/equipos/2prebenjamin.jpg" alt="Pre-Benjamines">
+					<p class="categoria">Pre-Benjamines</p>
+				</div>
+			</div>
+			<!-- BENJAMIN -->
+			<div class="equipo">
+				<div id="imagenEquipo">
+					<img src="img/equipos/3benjamin.jpg" alt="Benjamines">
+					<p class="categoria">Benjamines</p>
+				</div>
+			</div>
+			<!-- ALEVIN -->
+			<div class="equipo">
+				<div id="imagenEquipo">
+					<img src="img/equipos/4alevin.jpg" alt="Alevin">
+					<p class="categoria">Alevín</p>
+				</div>
+			</div>
+			<!-- INFANTIL -->
+			<div class="equipo">
+				<div id="imagenEquipo">
+					<img src="img/equipos/5infantil.png" alt="Infantil">					
+					<p class="categoria">Infantil</p>
+				</div>
+			</div>
+			<!-- CADETE -->
+			<div class="equipo">
+				<div id="imagenEquipo">
+					<img src="img/equipos/6cadete.jpg" alt="cadete">					
+					<p class="categoria">Cadete</p>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- ENTRENADORES  -->
+
+		<div class="contenedorEquipos" id="Entrenadores">
+
+			<!-- Ismael -->
+			<div class="equipo">
+				<div id="imagenEquipo">
+					<img src="img/entrenadores/ismael.jpg" alt="Ismael">
+					<p class="categoria">Ismael</p>
+				</div>
+			</div>
+			<!-- BENJAMIN -->
+			<div class="equipo">
+				<div id="imagenEquipo">
+					<img src="img/entrenadores/fran.jpg" alt="Fran Migo">
+					<p class="categoria">Fran Migo</p>
+				</div>
+			</div>
+			<!-- ALEVIN -->
+			<div class="equipo">
+				<div id="imagenEquipo">
+					<img src="img/entrenadores/borrego.jpg" alt="Borrego">
+					<p class="categoria">Borrego</p>
+				</div>
+			</div>
+			<!-- INFANTIL -->
+			<div class="equipo">
+				<div id="imagenEquipo">
+					<img src="img/entrenadores/alex.jpg" alt="Alex">					
+					<p class="categoria">Alex</p>
+				</div>
+			</div>
+			<!-- Mario -->
+			<div class="equipo">
+				<div id="imagenEquipo">
+					<img src="img/entrenadores/mario.jpg" alt="Mario">					
+					<p class="categoria">Mario</p>
+				</div>
+			</div>
+			<!-- Chaves -->
+			<div class="equipo">
+				<div id="imagenEquipo">
+					<img src="img/entrenadores/chaves.jpg" alt="Chaves">
+					<p class="categoria">Chaves</p>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+
+	
+	
+
+
+	<!-- GALERIA  -->
+	<section id="galeria">
+		<h2 class="tituloBlanco" data-aos="fade-up">Galería Campus</h2>
+		
+ 
+		<div id="contenedorGaleria">
+
+			<img src="img/galeria/1.JPG" class= "imgGal" alt="Fran en piscina" data-aos="zoom-out-down">
+			<img src="img/galeria/2.JPG" class= "imgGal" alt="Inicio Campus" data-aos="zoom-out-down">
+			<img src="img/galeria/3.JPG" class= "imgGal" alt="Alevines Migos" data-aos="zoom-out-down">
+			<img src="img/galeria/4.JPG" class= "imgGal" alt="Adán" data-aos="zoom-out-down">
+			<img src="img/galeria/5.JPG" class= "imgGal" alt="Fran y Adán" data-aos="zoom-out-down">
+			<img src="img/galeria/6.JPG" class= "imgGal" alt="Buceo" data-aos="zoom-out-down">
+			<img src="img/galeria/7.JPG" class= "imgGal" alt="Partido exhibición" data-aos="zoom-out-down">
+			<img src="img/galeria/8.JPG" class= "imgGal" alt="Jaime Bebés" data-aos="zoom-out-down">
+			<img src="img/galeria/9.JPG" class= "imgGal" alt="Fran en piscina" data-aos="zoom-out-down">
+			<img src="img/galeria/10.JPG" class= "imgGal" alt="Abrazos"> 
+			<img src="img/galeria/11.JPG" class= "imgGal" alt="Técnificación" data-aos="zoom-out-down">
+			<img src="img/galeria/12.JPG" class= "imgGal" alt="Cadetes Borre" data-aos="zoom-out-down"> 
+			
+				
+		</div>
+
+		<div id="modalLightboxG">
+			<div id="imageToShow">
+				
+			</div>
+			<button class="lbButtons lbbRight " onclick="nextImgGal()">
+				<i class="fa-solid fa-angle-right"></i>
+			</button>
+
+			<button class="lbButtons lbbLeft "onclick="prevImgGal() ">
+				<i class="fa-solid fa-angle-left"></i>
+			</button>
+ 
+	</section>
+
+	<!-- CONTACTOS -->
+	<section id="contactos">
+		<h2 class="tituloNegro" data-aos="fade-up">Contactos | Formularios</h2>
+
+		<div id="contenedorInfo">
+			<div id="info">
+				<h3 class="cabeceraInfo">Información de contacto</h3>
+				<h4 id="monitor">Fran Verdugo Román</h4>
+				<p id="infoP">Número de contácto: 687566987</p>
+				<h4 id="monitor">Jaime Verdugo Román</h4>
+				<p id="infoP">Número de contácto: 664577226</p>
+			</div>
+			<div id="info">
+				<h3 class="cabeceraInfo">Formulario</h3>
+				<form action="#" id="formulario">
+					<input id="formHijo" type="text" name="hijo" placeholder="Escriba su nombre" required>
+					<input id="formFecha" type="date" name="fecha" placeholder="Fecha de nacimiento" required>
+					<input id="formNombre" type="text" name="nombre" placeholder="Nombre de padre/madre/tutor" required>
+					<input id="formNumero" type="tel" name="numero" placeholder="Teléfono de contacto" required>
+					<input id="formComentenos" type="text" name="texto" placeholder="Coméntenos...">
+					<input id="enviar" onclick="modalReserva()" value="Enviar" type="button">
+					
+				</form>
+			</div>
+			
+		</div> 
+	</section>
+
+	<!-- MODAL RESERVA  -->
+
+	<div id="modalReserva">
+		<div id="modalBoxBR">
+			<h1>Formulario enviado a Escuelas Futsal Migo´s</h1>
+			<p id="mensajeReserva">Lorem ipsum dolor sit amet consectetur,
+				adipisicing elit. Praesentium, harum.
+		
+			</p>
+			<button onclick="cerrarMBR()">Gracias!! Futsalero</button>
+		</div>
+	</div>
+
+	<!-- PIE DE PAGINA -->
+
+	<footer id="pieDePagina">
+		<a href="https://www.instagram.com/migos_escuela_futsal_oficial/" target="_blank">
+			<img src="img/instagram.svg" alt="Instagram">
+		</a>
+		<a href="https://wa.me/+34647810787" target="_blank">
+			<img src="img/whatsapp.svg" alt="WhatsApp">
+		</a>
+		<i class="bi bi-facebook"></i>
+	</footer>
+
+<script>
+	 modalBienvenida();
+
+	setInterval(slideShow, 4000);
+	// setInterval(slideShowAnim, 4000);
+	
+	realLightbox();
+
+</script>
+<!-- libreria  -->
+<script>
+	AOS.init();
+  </script>
+</body>
+</html>
