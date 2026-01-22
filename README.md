@@ -1,4 +1,4 @@
-Migos Escuelas 🏫
+Migos Escuelas 
 Migos Escuelas es una plataforma web diseñada para la gestión y visualización de instituciones educativas. El proyecto permite centralizar información sobre escuelas, facilitando el acceso a datos clave y mejorando la organización administrativa y académica a través de una interfaz intuitiva y moderna.
 
 🚀 Demo
